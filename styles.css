@@ -1,0 +1,180 @@
+/* Gaya umum untuk seluruh halaman */
+body {
+    font-family: 'Arial', sans-serif; /* Mengatur font seluruh halaman */
+    display: flex; /* Menggunakan flexbox untuk layout */
+    justify-content: center; /* Memusatkan konten secara horizontal */
+    align-items: center; /* Memusatkan konten secara vertikal */
+    height: 100vh; /* Menetapkan tinggi viewport penuh */
+    margin: 0; /* Menghapus margin default */
+    background: linear-gradient(140deg, #8cf3e5, #2704f0); /* Latar belakang gradien */
+    animation: gradient 5s ease infinite; /* Animasi gradien latar belakang */
+}
+
+/* Animasi gradien latar belakang */
+@keyframes gradient {
+    0% {
+        background: linear-gradient(140deg, #8cf3e5, #2704f0);
+    }
+    50% {
+        background: linear-gradient(140deg, #6ab0d1, #1d02b2);
+    }
+    100% {
+        background: linear-gradient(140deg, #8cf3e5, #2704f0);
+    }
+}
+
+/* Gaya untuk kontainer utama */
+.container {
+    background: rgba(173, 192, 231, 0.9); /* Warna latar belakang dengan transparansi */
+    padding: 20px; /* Padding internal */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan kotak */
+    width: 470px; /* Lebar tetap */
+    text-align: center; /* Teks di tengah */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transisi untuk efek hover */
+}
+
+/* Efek hover untuk kontainer */
+.container:hover {
+    transform: scale(1.05); /* Perbesar ukuran */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar */
+}
+
+/* Gaya untuk judul utama */
+h1 {
+    margin-bottom: 20px; /* Margin bawah */
+    color: white; /* Warna teks */
+    font-size: 2em; /* Ukuran font */
+    animation: fadeIn 1s ease-in-out; /* Animasi fade in */
+}
+
+/* Animasi fade in untuk judul */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Opasitas awal 0 */
+        transform: translateY(-20px); /* Geser ke atas */
+    }
+    100% {
+        opacity: 1; /* Opasitas akhir 1 */
+        transform: translateY(0); /* Geser ke posisi semula */
+    }
+}
+
+/* Gaya untuk form */
+form {
+    display: flex; /* Menggunakan flexbox */
+    margin-bottom: 20px; /* Margin bawah */
+}
+
+/* Gaya untuk input teks */
+input[type="text"] {
+    flex: 1; /* Ambil ruang tersisa */
+    padding: 10px; /* Padding internal */
+    border: 1px solid #ccc; /* Border abu-abu */
+    border-radius: 4px; /* Sudut membulat */
+    transition: border-color 0.3s; /* Transisi untuk border */
+}
+
+/* Gaya untuk input saat fokus */
+input[type="text"]:focus {
+    border-color: #527ff8; /* Warna border saat fokus */
+    outline: none; /* Menghapus outline default */
+}
+
+/* Gaya untuk tombol */
+button {
+    padding: 10px; /* Padding internal */
+    border: none; /* Menghapus border default */
+    background-color: #608afdec; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    border-radius: 4px; /* Sudut membulat */
+    cursor: pointer; /* Menampilkan kursor pointer */
+    transition: background-color 0.3s, transform 0.3s; /* Transisi untuk efek hover */
+}
+
+/* Efek hover untuk tombol */
+button:hover {
+    background-color: #4169e1; /* Warna latar belakang saat hover */
+    transform: scale(1.05); /* Perbesar ukuran */
+}
+
+/* Gaya untuk kolom tugas */
+.task-columns {
+    display: flex; /* Menggunakan flexbox */
+    justify-content: space-between; /* Ruang antara kolom */
+}
+
+/* Gaya untuk kolom tugas individual */
+.task-column {
+    width: 45%; /* Lebar kolom */
+}
+
+/* Gaya untuk judul kolom */
+h2 {
+    margin-bottom: 10px; /* Margin bawah */
+    color: #527ff8; /* Warna teks */
+    font-size: 1.5em; /* Ukuran font */
+}
+
+/* Gaya untuk daftar tugas */
+ul {
+    list-style: none; /* Menghapus bullet default */
+    padding: 0; /* Menghapus padding default */
+    margin-top: 10px; /* Margin atas */
+}
+
+/* Gaya untuk elemen daftar tugas */
+li {
+    padding: 10px; /* Padding internal */
+    border-bottom: 1px solid #ccc; /* Border bawah */
+    display: flex; /* Menggunakan flexbox */
+    justify-content: space-between; /* Ruang antara elemen */
+    align-items: center; /* Selaraskan elemen secara vertikal */
+    background-color: white; /* Warna latar belakang */
+    border-radius: 4px; /* Sudut membulat */
+    margin-bottom: 10px; /* Margin bawah */
+    transition: background-color 0.3s, transform 0.3s; /* Transisi untuk efek hover */
+}
+
+/* Efek hover untuk elemen daftar tugas */
+li:hover {
+    background-color: #f0f0f0; /* Warna latar belakang saat hover */
+    transform: scale(1.02); /* Perbesar ukuran */
+}
+
+/* Gaya untuk elemen daftar tugas yang selesai */
+li.completed {
+    text-decoration: line-through; /* Garis silang pada teks */
+    color: #888; /* Warna teks */
+}
+
+/* Gaya untuk tombol dalam elemen daftar tugas */
+li button {
+    background: none; /* Menghapus latar belakang */
+    border: none; /* Menghapus border */
+    cursor: pointer; /* Menampilkan kursor pointer */
+    color: #dc3545; /* Warna teks */
+    transition: color 0.3s, transform 0.3s; /* Transisi untuk efek hover */
+}
+
+/* Efek hover untuk tombol dalam elemen daftar tugas */
+li button:hover {
+    color: #c82333; /* Warna teks saat hover */
+    transform: scale(1.1); /* Perbesar ukuran */
+}
+
+/* Gaya untuk tombol 'Complete' pada elemen tugas yang selesai */
+li.completed button:first-child {
+    color: #28a745; /* Warna teks */
+}
+
+/* Margin untuk tombol 'Complete' */
+li button:first-child {
+    margin-right: 10px; /* Margin kanan */
+}
+
+/* Efek hover untuk tombol 'Complete' */
+li button:first-child:hover {
+    color: #218838; /* Warna teks saat hover */
+    transform: scale(1.1); /* Perbesar ukuran */
+}
