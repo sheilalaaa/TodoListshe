@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <!-- Link ke stylesheet eksternal -->
+    <!-- Menyertakan file CSS untuk mengatur gaya tampilan halaman -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Container utama untuk daftar todo -->
+    <!-- Menyimpan seluruh elemen aplikasi todo list -->
+    <div class="container">
+        <!-- Judul halaman -->
+        <!-- Menampilkan judul "Todo List" di bagian atas halaman -->
+        <h1>Todo List</h1>
+        
+        <!-- Form untuk menambah tugas baru -->
+        <!-- Formulir yang memungkinkan pengguna menambahkan tugas baru -->
+        <form id="todo-form">
+            <!-- Input teks untuk memasukkan tugas baru -->
+            <!-- Kotak teks untuk pengguna memasukkan deskripsi tugas baru -->
+            <input type="text" id="new-task" placeholder="Add a new task">
+            
+            <!-- Tombol untuk menambah tugas baru -->
+            <!-- Tombol yang digunakan untuk mengirimkan formulir dan menambahkan tugas baru -->
+            <button type="submit">Add</button>
+        </form>
+        
+        <!-- Dropdown untuk filter tugas -->
+        <!-- Dropdown menu yang memungkinkan pengguna memfilter tugas berdasarkan status -->
+        <select id="filter">
+            <!-- Opsi untuk menampilkan semua tugas -->
+            <option value="all">All</option>
+            <!-- Opsi untuk menampilkan tugas yang sudah selesai -->
+            <option value="completed">Completed</option>
+            <!-- Opsi untuk menampilkan tugas yang belum selesai -->
+            <option value="uncompleted">Uncompleted</option>
+        </select>
+        
+        <!-- Kolom untuk memisahkan tugas yang belum selesai dan yang sudah selesai -->
+        <!-- Membagi tugas ke dalam dua kolom berdasarkan status -->
+        <div class="task-columns">
+            <!-- Kolom untuk tugas yang belum selesai -->
+            <!-- Menampilkan daftar tugas yang belum selesai -->
+            <div class="task-column">
+                <h2>Uncompleted</h2>
+                <!-- Daftar tugas yang belum selesai -->
+                <!-- Elemen <ul> untuk menampilkan daftar tugas yang belum selesai -->
+                <ul id="uncompleted-tasks">
+                    <!-- Tugas yang belum selesai akan ditambahkan di sini -->
+                    <!-- Item tugas yang belum selesai akan ditempatkan di sini -->
+                </ul>
+            </div>
+            
+            <!-- Kolom untuk tugas yang sudah selesai -->
+            <!-- Menampilkan daftar tugas yang sudah selesai -->
+            <div class="task-column">
+                <h2>Completed</h2>
+                <!-- Daftar tugas yang sudah selesai -->
+                <!-- Elemen <ul> untuk menampilkan daftar tugas yang sudah selesai -->
+                <ul id="completed-tasks">
+                    <!-- Tugas yang sudah selesai akan ditambahkan di sini -->
+                    <!-- Item tugas yang sudah selesai akan ditempatkan di sini -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Link ke script eksternal -->
+    <!-- Menyertakan file JavaScript untuk mengatur interaksi dan logika aplikasi -->
+    <script src="script.js"></script>
+</body>
+</html>
